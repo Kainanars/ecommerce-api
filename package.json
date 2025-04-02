@@ -1,0 +1,39 @@
+{
+  "name": "ecommerce-api",
+  "version": "1.0.0",
+  "main": "server.ts",
+  "scripts": {
+    "dev": "nodemon --watch src --ext ts --exec ts-node -r tsconfig-paths/register src/server.ts",
+    "build": "tsc",
+    "lint": "tslint --project tsconfig.json",
+    "start": "node dist/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kainanars/ecommerce-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kainanars/ecommerce-api/issues"
+  },
+  "homepage": "https://github.com/Kainanars/ecommerce-api#readme",
+  "description": "",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "dotenv": "^16.4.7",
+    "ecommerce-api": "file:",
+    "express": "^5.1.0",
+    "mongoose": "^8.13.1",
+    "node-cache": "^5.1.2",
+    "tsconfig-paths": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.13.17",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}
