@@ -4,7 +4,7 @@ import {
   CreateProductDTO,
   CreateProductResponse,
   CreateProductError,
-} from '@/application/dtos/CreateProductDTO';
+} from '@/interfaces/dtos/CreateProductDTO';
 
 export class CreateProductUseCase {
   constructor(private readonly productRepository: IProductRepository) {}
@@ -21,14 +21,10 @@ export class CreateProductUseCase {
         productData.category,
         productData.stock,
         productData.images,
-        new Date(),
-        new Date(),
         true,
         productData.discount,
         productData.tags,
-        productData.brand,
-        { average: 0, count: 0 },
-        []
+        productData.brand
       );
 
       const createdProduct = await this.productRepository.create(product);

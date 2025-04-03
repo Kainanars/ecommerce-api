@@ -3,7 +3,7 @@ import {
   UpdateProductDTO,
   UpdateProductResponse,
   UpdateProductError,
-} from '@/application/dtos/UpdateProductDTO';
+} from '@/interfaces/dtos/UpdateProductDTO';
 
 export class UpdateProductUseCase {
   constructor(private readonly productRepository: IProductRepository) {}

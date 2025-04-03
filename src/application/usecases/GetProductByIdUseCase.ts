@@ -1,5 +1,5 @@
 import { IProductRepository } from '@/domain/repositories/IProductRepository';
-import { ProductDTO } from '@/application/dtos/ProductDTO';
+import { ProductDTO } from '@/interfaces/dtos/ProductDTO';
 
 export class GetProductByIdUseCase {
   constructor(private readonly productRepository: IProductRepository) {}
