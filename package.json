@@ -21,11 +21,13 @@
   "homepage": "https://github.com/Kainanars/ecommerce-api#readme",
   "description": "",
   "dependencies": {
+    "@types/mongoose": "^5.11.97",
     "chalk": "^5.4.1",
     "dotenv": "^16.4.7",
     "ecommerce-api": "file:",
     "express": "^5.1.0",
-    "mongoose": "^8.13.1",
+    "express-async-handler": "^1.2.0",
+    "mongoose": "^6.12.3",
     "node-cache": "^5.1.2",
     "tsconfig-paths": "^4.2.0"
   },

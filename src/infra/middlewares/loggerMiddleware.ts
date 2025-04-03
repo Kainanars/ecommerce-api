@@ -1,5 +1,4 @@
 import { Request, Response, NextFunction } from 'express';
-import chalk from 'chalk';
 
 const getEmoji = (method: string) => {
   switch (method) {
@@ -18,11 +17,13 @@ const getEmoji = (method: string) => {
   }
 };
 
-export const loggerMiddleware = (
+export const loggerMiddleware = async (
   req: Request,
   res: Response,
   next: NextFunction
 ) => {
+  const chalk = (await import('chalk')).default; // Importação dinâmica
+  
   const start = Date.now();
 
   res.on('finish', () => {

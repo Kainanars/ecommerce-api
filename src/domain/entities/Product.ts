@@ -7,8 +7,6 @@ export class Product {
     public category: string,
     public stock: number, // Quantidade em estoque
     public images: string[],
-    public createdAt: Date,
-    public updatedAt: Date,
     public isActive: boolean = true,
     public discount?: number,
     public tags?: string[],

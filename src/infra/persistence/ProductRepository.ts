@@ -1,6 +1,4 @@
-import ProductModel, {
-  IProductDocument,
-} from '@/infrastructure/database/models/ProductModel';
+import ProductModel, { IProductDocument } from '@/infra/database/models/ProductModel';
 import { Product } from '@/domain/entities/Product';
 import { IProductRepository } from '@/domain/repositories/IProductRepository';
 
@@ -62,8 +60,6 @@ export class ProductRepository implements IProductRepository {
       productDoc.category,
       productDoc.stock,
       productDoc.images,
-      productDoc.createdAt,
-      productDoc.updatedAt,
       productDoc.isActive,
       productDoc.discount,
       productDoc.tags,

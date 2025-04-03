@@ -7,8 +7,6 @@ export interface IProductDocument extends Document {
   category: string;
   stock: number;
   images: string[];
-  createdAt: Date;
-  updatedAt: Date;
   isActive: boolean;
   discount?: number;
   tags?: string[];
@@ -25,8 +23,6 @@ const ProductSchema: Schema = new mongoose.Schema(
     category: { type: String, required: true },
     stock: { type: Number, required: true },
     images: { type: [String], required: true },
-    createdAt: { type: Date, default: Date.now },
-    updatedAt: { type: Date, default: Date.now },
     isActive: { type: Boolean, default: true },
     discount: { type: Number },
     tags: { type: [String] },
@@ -37,7 +33,7 @@ const ProductSchema: Schema = new mongoose.Schema(
     },
     relatedProducts: { type: [String] },
   },
-  { timestamps: true }
+  { timestamps: true } 
 );
 
 const ProductModel = mongoose.model<IProductDocument>('Product', ProductSchema);
