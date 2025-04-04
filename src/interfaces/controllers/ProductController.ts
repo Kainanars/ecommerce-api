@@ -1,4 +1,4 @@
-import { NextFunction, Request, Response } from 'express';
+import { Request, Response } from 'express';
 import { CreateProductUseCase } from '@/application/usecases/CreateProductUseCase';
 import { CreateProductDTO } from '@/interfaces/dtos/CreateProductDTO';
 import { GetProductByIdUseCase } from '@/application/usecases/GetProductByIdUseCase';
