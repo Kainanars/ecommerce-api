@@ -3,7 +3,6 @@ import dotenv from 'dotenv';
 import { connectDB } from '@/infra/database/database';
 import routes from '@/interfaces/routes';
 import { loggerMiddleware } from '@/infra/middlewares/loggerMiddleware';
-import { cacheMiddleware } from '@/infra/middlewares/cacheMiddleware';
 
 dotenv.config();
 
@@ -13,7 +12,6 @@ const PORT = process.env.PORT ?? 3000;
 // Middlewares
 app.use(express.json());
 app.use(loggerMiddleware);
-app.use(cacheMiddleware(60)); // Cache por 60 segundos
 
 app.use('/api', routes);
 
